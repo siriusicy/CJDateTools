@@ -30,6 +30,12 @@ NSLocalizedStringFromTableInBundle(key, @"DateTools", [NSBundle bundleWithPath:[
 
 @interface NSDate (DateTools)
 
+#pragma mark - CJ新增
+/// date转string
+- (NSString *)cj_dateToStringWithFormat:(NSString *)formatString;
+/// string转date
++ (NSDate *)cj_dateWithString:(NSString *)dateString format:(NSString *)formatString;
+
 #pragma mark - Time Ago
 + (NSString*)timeAgoSinceDate:(NSDate*)date;
 + (NSString*)shortTimeAgoSinceDate:(NSDate*)date;

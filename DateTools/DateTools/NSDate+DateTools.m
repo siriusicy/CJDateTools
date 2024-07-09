@@ -69,6 +69,17 @@ static NSCalendar *implicitCalendar = nil;
     [self setDefaultCalendarIdentifier:NSCalendarIdentifierGregorian];
 }
 
+#pragma mark - CJ新增
+/// date转string
+- (NSString *)cj_dateToStringWithFormat:(NSString *)formatString {
+    return [self formattedDateWithFormat:formatString];
+}
+/// string转date
++ (NSDate *)cj_dateWithString:(NSString *)dateString format:(NSString *)formatString {
+    return [self dateWithString:dateString formatString:formatString];
+}
+
+
 #pragma mark - Time Ago
 
 
